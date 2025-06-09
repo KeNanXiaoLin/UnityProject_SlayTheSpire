@@ -20,6 +20,17 @@ public class CardView : MonoBehaviour
         des.text = card.Des;
         mana.text = card.Mana.ToString();
         spriteRenderer.sprite = card.Image;
+    }
 
+    private void OnMouseEnter()
+    {
+        CardViewHover.Instance.Show(this);
+        Wrapper.SetActive(false);
+    }
+
+    private void OnMouseExit()
+    {
+        CardViewHover.Instance.Hide();
+        Wrapper.SetActive(true);
     }
 }

@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
+    <Compile Include="Assets\Scripts\System\CardViewHover.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonMono.cs" />
     <Compile Include="Assets\Scripts\Framework\Input\InputInfo.cs" />
