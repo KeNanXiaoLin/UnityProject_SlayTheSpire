@@ -49,7 +49,7 @@ public class HandView : MonoBehaviour
             Vector3 up = spline.EvaluateUpVector(p);
             //通过LookRotation方法，使用叉乘得到卡牌Y轴的朝向
             //Quaternion.LookRotation，第一个参数是面朝向，第二个参数是向上的朝向
-            Quaternion rotation = Quaternion.LookRotation(up, Vector3.Cross(-up, forward).normalized);
+            Quaternion rotation = Quaternion.LookRotation(-up, Vector3.Cross(-up, forward).normalized);
             //使用DoTween进行动画平滑过渡
             //第一个参数：目标值
             //第二个参数：平滑时间

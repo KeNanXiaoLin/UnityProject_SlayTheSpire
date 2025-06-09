@@ -5,6 +5,7 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     [SerializeField] private HandView handView;
+    [SerializeField] private CardData cardData;
     private void Start()
     {
         
@@ -14,8 +15,9 @@ public class Test : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            CardView card = CardViewCreator.Instance.CreateCardView(transform.position, transform.rotation);
-            StartCoroutine(handView.AddCard(card));
+            Card card = new Card(cardData);
+            CardView spawn_card = CardViewCreator.Instance.CreateCardView(card,transform.position, transform.rotation);
+            StartCoroutine(handView.AddCard(spawn_card));
         }
     }
 }
