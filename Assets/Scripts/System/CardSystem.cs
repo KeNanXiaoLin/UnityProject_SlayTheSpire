@@ -100,6 +100,7 @@ public class CardSystem : SingletonMono<CardSystem>
 
     private IEnumerator DrawCard()
     {
+        //这里是有问题的，卡组中的牌抽逛了会报错，后面要添加洗牌逻辑
         Card card = drawPile.Draw();
         hand.Add(card);
         CardView cardView = CardViewCreator.Instance.CreateCardView(card,drawCardPoint.position,drawCardPoint.rotation);

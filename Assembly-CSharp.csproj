@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Framework\Util\TextUtil.cs" />
     <Compile Include="Assets\Scripts\GamActions\EnemyTurnGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\EncryptionUtil.cs" />
+    <Compile Include="Assets\Scripts\Creator\EnemyViewCreator.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
     <Compile Include="Assets\Scripts\Framework\Scene\SceneMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\BaseManager.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\Scripts\GamActions\PerformEffectGA.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\EventCenter.cs" />
     <Compile Include="Assets\Scripts\Creator\CardViewCreator.cs" />
+    <Compile Include="Assets\Scripts\View\EnemyBoradView.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABResMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Music\MusicMgr.cs" />
     <Compile Include="Assets\Scripts\UI\EndTurnButtonUI.cs" />

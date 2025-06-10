@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySystem : MonoBehaviour
+public class EnemySystem : SingletonMono<EnemySystem>
 {
+    [SerializeField] private EnemyBoradView enemyBoradView;
+
     private void OnEnable()
     {
         ActionSystem.AttachPerformer<EnemyTurnGA>(EnemyTurnPerformer);
@@ -12,6 +14,14 @@ public class EnemySystem : MonoBehaviour
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<EnemyTurnGA>();
+    }
+
+    public void SetUp(List<EnemyData> datas)
+    {
+        foreach (var data in datas)
+        {
+            enemyBoradView.AddEnemy(data);
+        }
     }
 
     private IEnumerator EnemyTurnPerformer(EnemyTurnGA ga)
