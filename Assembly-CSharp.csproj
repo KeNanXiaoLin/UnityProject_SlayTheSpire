@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Framework\Res\ResMgr.cs" />
     <Compile Include="Assets\Scripts\Extension\ListExtension.cs" />
     <Compile Include="Assets\Scripts\System\EnermySystem.cs" />
+    <Compile Include="Assets\Scripts\GamActions\PlayCardGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerMgr.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\GameAction.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolObj.cs" />

@@ -10,6 +10,7 @@ public class CardView : MonoBehaviour
     [SerializeField] private TMP_Text title;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject Wrapper;
+    [SerializeField] private LayerMask dropAreaLayer;
 
     public Card Card { get; private set; }
 
@@ -71,10 +72,13 @@ public class CardView : MonoBehaviour
         //否则会导致初始位置没有记录，导致放下卡牌时位置错误。
         if (!Interactions.Instance.PlayerCanInteract() ||
             !Interactions.Instance.PlayerIsDragging) return;
-        //if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 100f))
-        //{
-        //    //Play Card
-        //}
+        Debug.Log("DropAreaLayer int is" + dropAreaLayer.value);
+        if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 100f,dropAreaLayer))
+        {
+            //Play Card
+            PlayCardGA playCard = new PlayCardGA(Card);
+            ActionSystem.Instance.Perform(playCard);
+        }
         else
         {
             transform.position = cardStartPos;
