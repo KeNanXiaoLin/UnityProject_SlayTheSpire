@@ -47,6 +47,11 @@ public class CardSystem : SingletonMono<CardSystem>
         CardView cardView = handView.RemoveCard(playCardGA.Card);
         yield return DiscardCard(cardView);
         //执行卡牌效果
+        foreach (var effect in playCardGA.Card.Effects)
+        {
+            PerformEffectGA performEffectGA = new PerformEffectGA(effect);
+            ActionSystem.Instance.AddReaction(performEffectGA);
+        }
     }
 
     private void EnemyTurnPreReaction(EnermyTurnGA enermyTurnGA)

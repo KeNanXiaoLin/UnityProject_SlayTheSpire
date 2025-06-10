@@ -68,8 +68,10 @@
     <Compile Include="Assets\Scripts\Framework\Scene\SceneMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\MathUtil.cs" />
+    <Compile Include="Assets\Scripts\System\EffectSystem.cs" />
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
+    <Compile Include="Assets\Scripts\Effects\DrawCardsEffect.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
     <Compile Include="Assets\Scripts\System\MatchSetUpSystem.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\ActionSystem.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\Scripts\ActionSystem\GameAction.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolObj.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerItem.cs" />
+    <Compile Include="Assets\Scripts\GamActions\PerformEffectGA.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\EventCenter.cs" />
     <Compile Include="Assets\Scripts\GamActions\EnermyTurnGA.cs" />
     <Compile Include="Assets\Scripts\Creator\CardViewCreator.cs" />
@@ -101,6 +104,7 @@
     <Compile Include="Assets\Scripts\Framework\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonAutoMono.cs" />
     <Compile Include="Assets\Scripts\Framework\EditorRes\EditorResMgr.cs" />
+    <Compile Include="Assets\Scripts\Model\Effect.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
     <Compile Include="Assets\Scripts\System\Interactions.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\UIMgr.cs" />
@@ -1187,9 +1191,29 @@
       <Project>{686E3DD7-756A-1C09-1EA0-AD42C3CAE312}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="SRDemo-Editor.csproj">
+      <Project>{A26AB8CD-4550-8335-D0FF-B658BCAE2C88}</Project>
+      <Name>SRDemo-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SRDemo.csproj">
+      <Project>{B5BC10A5-AA56-A6B2-01D8-0222076272C1}</Project>
+      <Name>SRDemo</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.AssetBundleBrowser.Editor.csproj">
       <Project>{B2752CA0-2AEE-DD35-650A-2D11277C05A7}</Project>
       <Name>Unity.AssetBundleBrowser.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SREditor-Editor.csproj">
+      <Project>{73BAA3C3-4C4C-BD6C-5BC0-42CB3420DACA}</Project>
+      <Name>SREditor-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SREditor.csproj">
+      <Project>{4E2ADF31-EC86-122D-70C0-943F89FA12D7}</Project>
+      <Name>SREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NewTest.csproj">
+      <Project>{3DFFC87A-70FC-4460-E77B-8E920BCF2050}</Project>
+      <Name>NewTest</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
