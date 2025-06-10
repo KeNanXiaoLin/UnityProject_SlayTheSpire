@@ -72,8 +72,8 @@ public class CardView : MonoBehaviour
         //否则会导致初始位置没有记录，导致放下卡牌时位置错误。
         if (!Interactions.Instance.PlayerCanInteract() ||
             !Interactions.Instance.PlayerIsDragging) return;
-        Debug.Log("DropAreaLayer int is" + dropAreaLayer.value);
-        if (Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 100f,dropAreaLayer))
+        if (ManaSystem.Instance.HasEnoughMana(Card.Mana) &&
+            Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 100f,dropAreaLayer))
         {
             //Play Card
             PlayCardGA playCard = new PlayCardGA(Card);

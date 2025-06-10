@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Framework\Singleton\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\MathUtil.cs" />
     <Compile Include="Assets\Scripts\System\EffectSystem.cs" />
+    <Compile Include="Assets\Scripts\UI\ManaUI.cs" />
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
     <Compile Include="Assets\Scripts\Effects\DrawCardsEffect.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\Framework\Pool\PoolMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonMono.cs" />
     <Compile Include="Assets\Scripts\GamActions\DrawCardGA.cs" />
+    <Compile Include="Assets\Scripts\GamActions\SpendManaGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Input\InputInfo.cs" />
     <Compile Include="Assets\Scripts\Framework\Res\ResMgr.cs" />
     <Compile Include="Assets\Scripts\Extension\ListExtension.cs" />
@@ -94,18 +96,20 @@
     <Compile Include="Assets\Scripts\Creator\CardViewCreator.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABResMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Music\MusicMgr.cs" />
+    <Compile Include="Assets\Scripts\UI\EndTurnButtonUI.cs" />
     <Compile Include="Assets\Scripts\GamActions\DiscardAllCardsGA.cs" />
     <Compile Include="Assets\Scripts\View\HandView.cs" />
     <Compile Include="Assets\Scripts\Model\Card.cs" />
     <Compile Include="Assets\Scripts\Framework\UWQ\UWQResMgr.cs" />
     <Compile Include="Assets\Scripts\Util\MouseUtil.cs" />
     <Compile Include="Assets\Scripts\System\CardSystem.cs" />
-    <Compile Include="Assets\Scripts\Test\EndTurnButtonUI.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonAutoMono.cs" />
     <Compile Include="Assets\Scripts\Framework\EditorRes\EditorResMgr.cs" />
     <Compile Include="Assets\Scripts\Model\Effect.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
+    <Compile Include="Assets\Scripts\System\ManaSystem.cs" />
+    <Compile Include="Assets\Scripts\GamActions\RefillManaGA.cs" />
     <Compile Include="Assets\Scripts\System\Interactions.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\UIMgr.cs" />
   </ItemGroup>

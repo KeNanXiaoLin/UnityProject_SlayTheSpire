@@ -46,6 +46,9 @@ public class CardSystem : SingletonMono<CardSystem>
         hand.Remove(playCardGA.Card);
         CardView cardView = handView.RemoveCard(playCardGA.Card);
         yield return DiscardCard(cardView);
+        //消耗卡牌的法力值
+        SpendManaGA spendManaGA = new SpendManaGA(playCardGA.Card.Mana);
+        ActionSystem.Instance.AddReaction(spendManaGA);
         //执行卡牌效果
         foreach (var effect in playCardGA.Card.Effects)
         {
