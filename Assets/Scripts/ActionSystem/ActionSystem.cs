@@ -103,6 +103,11 @@ public class ActionSystem : SingletonMono<ActionSystem>
         }
     }
 
+    public void AddReaction(GameAction action)
+    {
+        reactions?.Add(action);
+    }
+
     // 为指定类型的动作附加一个执行者
     public static void AttachPerformer<T>(Func<T, IEnumerator> performer) where T : GameAction
     {
