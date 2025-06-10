@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
+    <Compile Include="Assets\Scripts\System\MatchSetUpSystem.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\ActionSystem.cs" />
     <Compile Include="Assets\Scripts\System\CardViewHover.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolMgr.cs" />
@@ -93,12 +94,14 @@
     <Compile Include="Assets\Scripts\View\HandView.cs" />
     <Compile Include="Assets\Scripts\Model\Card.cs" />
     <Compile Include="Assets\Scripts\Framework\UWQ\UWQResMgr.cs" />
+    <Compile Include="Assets\Scripts\Util\MouseUtil.cs" />
     <Compile Include="Assets\Scripts\System\CardSystem.cs" />
     <Compile Include="Assets\Scripts\Test\EndTurnButtonUI.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonAutoMono.cs" />
     <Compile Include="Assets\Scripts\Framework\EditorRes\EditorResMgr.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
+    <Compile Include="Assets\Scripts\System\Interactions.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\UIMgr.cs" />
   </ItemGroup>
   <ItemGroup>
