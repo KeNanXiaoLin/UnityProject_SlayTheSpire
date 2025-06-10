@@ -60,9 +60,11 @@
     <Analyzer Include="D:\Unity\2022.3.53f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\System\EnemySystem.cs" />
     <Compile Include="Assets\Scripts\View\CardView.cs" />
     <Compile Include="Assets\Scripts\Framework\Input\InputMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\TextUtil.cs" />
+    <Compile Include="Assets\Scripts\GamActions\EnemyTurnGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\EncryptionUtil.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
     <Compile Include="Assets\Scripts\Framework\Scene\SceneMgr.cs" />
@@ -73,8 +75,8 @@
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
     <Compile Include="Assets\Scripts\Effects\DrawCardsEffect.cs" />
-    <Compile Include="Assets\Scripts\View\EnermyView.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
+    <Compile Include="Assets\Scripts\System\HeroSystem.cs" />
     <Compile Include="Assets\Scripts\System\MatchSetUpSystem.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\ActionSystem.cs" />
     <Compile Include="Assets\Scripts\System\CardViewHover.cs" />
@@ -84,8 +86,8 @@
     <Compile Include="Assets\Scripts\GamActions\SpendManaGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Input\InputInfo.cs" />
     <Compile Include="Assets\Scripts\Framework\Res\ResMgr.cs" />
+    <Compile Include="Assets\Scripts\View\EnemyView.cs" />
     <Compile Include="Assets\Scripts\Extension\ListExtension.cs" />
-    <Compile Include="Assets\Scripts\System\EnermySystem.cs" />
     <Compile Include="Assets\Scripts\GamActions\PlayCardGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerMgr.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\GameAction.cs" />
@@ -93,7 +95,6 @@
     <Compile Include="Assets\Scripts\Framework\Timer\TimerItem.cs" />
     <Compile Include="Assets\Scripts\GamActions\PerformEffectGA.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\EventCenter.cs" />
-    <Compile Include="Assets\Scripts\GamActions\EnermyTurnGA.cs" />
     <Compile Include="Assets\Scripts\Creator\CardViewCreator.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABResMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Music\MusicMgr.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Scripts\View\CombatantView.cs" />
     <Compile Include="Assets\Scripts\GamActions\DiscardAllCardsGA.cs" />
     <Compile Include="Assets\Scripts\View\HandView.cs" />
+    <Compile Include="Assets\Scripts\Data\EnemyData.cs" />
     <Compile Include="Assets\Scripts\Model\Card.cs" />
     <Compile Include="Assets\Scripts\Framework\UWQ\UWQResMgr.cs" />
     <Compile Include="Assets\Scripts\View\HeroView.cs" />
@@ -115,6 +117,7 @@
     <Compile Include="Assets\Scripts\GamActions\RefillManaGA.cs" />
     <Compile Include="Assets\Scripts\System\Interactions.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\UIMgr.cs" />
+    <Compile Include="Assets\Scripts\Data\HeroData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

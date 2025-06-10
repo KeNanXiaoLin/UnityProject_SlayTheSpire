@@ -47,7 +47,6 @@ public class CardView : MonoBehaviour
         Wrapper.SetActive(true);
         CardViewHover.Instance.Hide();
         cardStartPos = transform.position;
-        Debug.Log("记录卡牌初始位置" + cardStartPos);
         cardStartRot = transform.rotation;
         transform.position = MouseUtil.GetMousePositionInWorldSpace(-1f);
         transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -62,7 +61,6 @@ public class CardView : MonoBehaviour
         //添加判断!Interactions.Instance.PlayerIsDragging,玩家不处于拖曳状态时，直接返回
         if (!Interactions.Instance.PlayerCanInteract() || 
             !Interactions.Instance.PlayerIsDragging) return;
-        Debug.Log("正在拖动卡牌");
         transform.position = MouseUtil.GetMousePositionInWorldSpace(-1f);
     }
 

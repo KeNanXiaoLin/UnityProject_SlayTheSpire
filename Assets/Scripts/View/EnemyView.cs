@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class EnermyView : CombatantView
+public class EnemyView : CombatantView
 {
     [SerializeField] private TMP_Text atkText;
 
     public int AtkAmount { get; set; }
 
-    public void SetUp(int atkAmount)
+    public void SetUp(EnemyData data)
     {
-        AtkAmount = atkAmount;
+        AtkAmount = data.Atk;
         UpdateAtkText();
-        SetUpBase(100, null);
+        SetUpBase(data.Health, data.Image);
     }
 
     public void UpdateAtkText()

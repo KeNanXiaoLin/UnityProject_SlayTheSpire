@@ -18,8 +18,8 @@ public class CardSystem : SingletonMono<CardSystem>
         ActionSystem.AttachPerformer<DrawCardGA>(DrawCardPerformer);
         ActionSystem.AttachPerformer<DiscardAllCardsGA>(DisCardAllCardPerformer);
         ActionSystem.AttachPerformer<PlayCardGA>(PlayCardPerformer);
-        ActionSystem.SubscribeReaction<EnermyTurnGA>(EnemyTurnPreReaction,ReactionTiming.PRE);
-        ActionSystem.SubscribeReaction<EnermyTurnGA>(EnemyTurnPostReaction,ReactionTiming.POST);
+        ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPreReaction,ReactionTiming.PRE);
+        ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction,ReactionTiming.POST);
         
     }
 
@@ -28,8 +28,8 @@ public class CardSystem : SingletonMono<CardSystem>
         ActionSystem.DetachPerformer<DrawCardGA>();
         ActionSystem.DetachPerformer<DiscardAllCardsGA>();
         ActionSystem.DetachPerformer<PlayCardGA>();
-        ActionSystem.UnsubscribeReaction<EnermyTurnGA>(EnemyTurnPreReaction, ReactionTiming.PRE);
-        ActionSystem.UnsubscribeReaction<EnermyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
+        ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPreReaction, ReactionTiming.PRE);
+        ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
     }
 
     public void SetUp(List<CardData> deckData)
@@ -57,13 +57,13 @@ public class CardSystem : SingletonMono<CardSystem>
         }
     }
 
-    private void EnemyTurnPreReaction(EnermyTurnGA enermyTurnGA)
+    private void EnemyTurnPreReaction(EnemyTurnGA enemyTurnGA)
     {
         DiscardAllCardsGA discardAllCardsGA = new DiscardAllCardsGA();
         ActionSystem.Instance.AddReaction(discardAllCardsGA);
     }
 
-    private void EnemyTurnPostReaction(EnermyTurnGA enermyTurnGA)
+    private void EnemyTurnPostReaction(EnemyTurnGA enemyTurnGA)
     {
         DrawCardGA drawCardGA = new DrawCardGA(5);
         ActionSystem.Instance.AddReaction(drawCardGA);

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MatchSetUpSystem : MonoBehaviour
 {
-    [SerializeField] private List<CardData> cards;
+    [SerializeField] private HeroData heroData;
 
     private void Start()
     {
-        CardSystem.Instance.SetUp(cards);
+        HeroSystem.Instance.SetUp(heroData);
+        CardSystem.Instance.SetUp(heroData.Deck);
         DrawCardGA drawCardGA = new DrawCardGA(5);
         ActionSystem.Instance.Perform(drawCardGA, () =>
         {

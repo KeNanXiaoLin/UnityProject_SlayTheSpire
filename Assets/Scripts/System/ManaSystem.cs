@@ -19,14 +19,14 @@ public class ManaSystem : SingletonMono<ManaSystem>
     {
         ActionSystem.AttachPerformer<SpendManaGA>(SpendManaPerformer);
         ActionSystem.AttachPerformer<RefillManaGA>(RefillManaPerformer);
-        ActionSystem.SubscribeReaction<EnermyTurnGA>(EnermyEndTurnPerformer, ReactionTiming.POST);
+        ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyEndTurnPerformer, ReactionTiming.POST);
     }
 
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<SpendManaGA>();
         ActionSystem.DetachPerformer<RefillManaGA>();
-        ActionSystem.UnsubscribeReaction<EnermyTurnGA>(EnermyEndTurnPerformer, ReactionTiming.POST);
+        ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyEndTurnPerformer, ReactionTiming.POST);
     }
 
     public bool HasEnoughMana(int manaCost)
@@ -49,7 +49,7 @@ public class ManaSystem : SingletonMono<ManaSystem>
         yield return null;
     }
 
-    private void EnermyEndTurnPerformer(EnermyTurnGA enermyTurnGA)
+    private void EnemyEndTurnPerformer(EnemyTurnGA enemyTurnGA)
     {
         RefillManaGA refillManaGA = new RefillManaGA();
         ActionSystem.Instance.AddReaction(refillManaGA);
