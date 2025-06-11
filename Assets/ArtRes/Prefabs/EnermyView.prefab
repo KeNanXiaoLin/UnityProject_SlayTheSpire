@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7747232443976826815}
   - component: {fileID: 4873994617990416145}
   - component: {fileID: 7214558593066887851}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 8614816859315343634}
   - component: {fileID: -8075074747941752689}
   - component: {fileID: 3803875848932107911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnermyView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,6 +250,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8614816859315343634}
     m_Modifications:
+    - target: {fileID: 382184464845466564, guid: d44bd27b26598d545925676d52a1a56c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2292076030778125327, guid: d44bd27b26598d545925676d52a1a56c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -290,9 +294,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2884910344815152090, guid: d44bd27b26598d545925676d52a1a56c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4401877912152494482, guid: d44bd27b26598d545925676d52a1a56c, type: 3}
       propertyPath: m_Name
       value: CombatantView
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401877912152494482, guid: d44bd27b26598d545925676d52a1a56c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

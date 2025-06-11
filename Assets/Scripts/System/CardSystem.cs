@@ -49,6 +49,12 @@ public class CardSystem : SingletonMono<CardSystem>
         //消耗卡牌的法力值
         SpendManaGA spendManaGA = new SpendManaGA(playCardGA.Card.Mana);
         ActionSystem.Instance.AddReaction(spendManaGA);
+
+        if(playCardGA.Card.ManualTargetEffect !=null)
+        {
+            PerformEffectGA performEffectGA = new PerformEffectGA(playCardGA.Card.ManualTargetEffect, new() { playCardGA.ManualTarget});
+            ActionSystem.Instance.AddReaction(performEffectGA);
+        }
         //执行卡牌效果
         foreach (var effect in playCardGA.Card.OtherEffects)
         {

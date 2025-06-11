@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Framework\Timer\TimerMgr.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\GameAction.cs" />
     <Compile Include="Assets\Scripts\Effects\AutoTargetEffect.cs" />
+    <Compile Include="Assets\Scripts\System\ManualTargetSystem.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolObj.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerItem.cs" />
     <Compile Include="Assets\Scripts\GamActions\PerformEffectGA.cs" />
