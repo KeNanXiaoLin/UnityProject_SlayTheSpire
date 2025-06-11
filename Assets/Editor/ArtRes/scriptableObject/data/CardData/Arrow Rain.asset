@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693f5a47b6e638f4d9c4518132e7cd22, type: 3}
   m_Name: Arrow Rain
   m_EditorClassIdentifier: 
-  <Des>k__BackingField: 
-  <Mana>k__BackingField: 0
-  <CardName>k__BackingField: 
-  <CardImage>k__BackingField: {fileID: 0}
-  <Effects>k__BackingField: []
+  <Des>k__BackingField: Damage 10 hp
+  <Mana>k__BackingField: 1
+  <CardName>k__BackingField: Arrow Rain
+  <CardImage>k__BackingField: {fileID: 21300000, guid: cce6f400d7c5d194999ddfad08706e6d, type: 3}
+  <Effects>k__BackingField:
+  - rid: 1222541732599300096
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 1222541732599300096
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 10

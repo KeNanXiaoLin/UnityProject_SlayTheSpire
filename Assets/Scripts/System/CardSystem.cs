@@ -50,9 +50,10 @@ public class CardSystem : SingletonMono<CardSystem>
         SpendManaGA spendManaGA = new SpendManaGA(playCardGA.Card.Mana);
         ActionSystem.Instance.AddReaction(spendManaGA);
         //执行卡牌效果
-        foreach (var effect in playCardGA.Card.Effects)
+        foreach (var effect in playCardGA.Card.OtherEffects)
         {
-            PerformEffectGA performEffectGA = new PerformEffectGA(effect);
+            List<CombatantView> targets = effect.TargetMode.GetTargets();
+            PerformEffectGA performEffectGA = new PerformEffectGA(effect.Effect,targets);
             ActionSystem.Instance.AddReaction(performEffectGA);
         }
     }
@@ -91,7 +92,7 @@ public class CardSystem : SingletonMono<CardSystem>
     {
         foreach (var card in hand)
         {
-            discardPile.Add(card);
+            
             CardView cardView = handView.RemoveCard(card);
             yield return DiscardCard(cardView);
         }
@@ -115,6 +116,7 @@ public class CardSystem : SingletonMono<CardSystem>
 
     private IEnumerator DiscardCard(CardView cardView)
     {
+        discardPile.Add(cardView.Card);
         cardView.transform.DOScale(Vector3.zero, 0.15f);
         Tween tween = cardView.transform.DOMove(disCardPoint.position, 0.15f);
         yield return tween.WaitForCompletion();

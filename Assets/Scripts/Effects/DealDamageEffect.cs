@@ -5,10 +5,9 @@ using UnityEngine;
 public class DealDamageEffect : Effect
 {
     [SerializeField] private int damageAmount;
-    public override GameAction GetGameAction()
+    public override GameAction GetGameAction(List<CombatantView> targets)
     {
-        List<CombatantView> enemies = new(EnemySystem.Instance.enemies);
-        DealDamageGA dealDamageGA = new DealDamageGA(damageAmount,enemies);
+        DealDamageGA dealDamageGA = new DealDamageGA(damageAmount, targets);
         return dealDamageGA;
     }
 }

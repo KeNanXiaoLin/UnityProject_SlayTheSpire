@@ -66,9 +66,11 @@
     <Compile Include="Assets\Scripts\Framework\Util\TextUtil.cs" />
     <Compile Include="Assets\Scripts\GamActions\EnemyTurnGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\EncryptionUtil.cs" />
+    <Compile Include="Assets\Scripts\TargetModes\AllEnemyTM.cs" />
     <Compile Include="Assets\Scripts\Creator\EnemyViewCreator.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
     <Compile Include="Assets\Scripts\GamActions\AttackHeroGA.cs" />
+    <Compile Include="Assets\Scripts\TargetModes\NoTM.cs" />
     <Compile Include="Assets\Scripts\Framework\Scene\SceneMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\MathUtil.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
     <Compile Include="Assets\Scripts\GamActions\KillEnemyGA.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
+    <Compile Include="Assets\Scripts\TargetModes\RandomEnemyTM.cs" />
     <Compile Include="Assets\Scripts\Effects\DrawCardsEffect.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
     <Compile Include="Assets\Scripts\System\HeroSystem.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Assets\Scripts\GamActions\PlayCardGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerMgr.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\GameAction.cs" />
+    <Compile Include="Assets\Scripts\Effects\AutoTargetEffect.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolObj.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerItem.cs" />
     <Compile Include="Assets\Scripts\GamActions\PerformEffectGA.cs" />
@@ -115,6 +119,7 @@
     <Compile Include="Assets\Scripts\Effects\DealDamageEffect.cs" />
     <Compile Include="Assets\Scripts\Util\MouseUtil.cs" />
     <Compile Include="Assets\Scripts\System\CardSystem.cs" />
+    <Compile Include="Assets\Scripts\Model\TargetMode.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonAutoMono.cs" />
     <Compile Include="Assets\Scripts\Framework\EditorRes\EditorResMgr.cs" />
