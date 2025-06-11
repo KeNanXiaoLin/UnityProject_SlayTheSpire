@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\Model\Effect.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
     <Compile Include="Assets\Scripts\System\ManaSystem.cs" />
+    <Compile Include="Assets\Scripts\View\ArrowView.cs" />
     <Compile Include="Assets\Scripts\GamActions\RefillManaGA.cs" />
     <Compile Include="Assets\Scripts\System\Interactions.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\UIMgr.cs" />

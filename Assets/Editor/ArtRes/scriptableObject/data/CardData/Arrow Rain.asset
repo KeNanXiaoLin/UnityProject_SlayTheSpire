@@ -16,12 +16,22 @@ MonoBehaviour:
   <Mana>k__BackingField: 1
   <CardName>k__BackingField: Arrow Rain
   <CardImage>k__BackingField: {fileID: 21300000, guid: cce6f400d7c5d194999ddfad08706e6d, type: 3}
-  <Effects>k__BackingField:
-  - rid: 1222541732599300096
+  <ManualTargetEffect>k__BackingField:
+    rid: -2
+  <OtherEffects>k__BackingField:
+  - <TargetMode>k__BackingField:
+      rid: 1222541738052157444
+    <Effect>k__BackingField:
+      rid: 1222541738052157445
   references:
     version: 2
     RefIds:
-    - rid: 1222541732599300096
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1222541738052157444
+      type: {class: AllEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1222541738052157445
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 10
