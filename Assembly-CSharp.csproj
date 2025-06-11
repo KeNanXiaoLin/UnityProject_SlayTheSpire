@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\System\EffectSystem.cs" />
     <Compile Include="Assets\Scripts\UI\ManaUI.cs" />
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
+    <Compile Include="Assets\Scripts\GamActions\KillEnemyGA.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
     <Compile Include="Assets\Scripts\Effects\DrawCardsEffect.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Scripts\Framework\UWQ\UWQResMgr.cs" />
     <Compile Include="Assets\Scripts\View\HeroView.cs" />
     <Compile Include="Assets\Scripts\System\DamageSystem.cs" />
+    <Compile Include="Assets\Scripts\Effects\DealDamageEffect.cs" />
     <Compile Include="Assets\Scripts\Util\MouseUtil.cs" />
     <Compile Include="Assets\Scripts\System\CardSystem.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\BasePanel.cs" />

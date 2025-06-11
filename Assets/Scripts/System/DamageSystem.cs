@@ -23,6 +23,19 @@ public class DamageSystem : MonoBehaviour
             target.Damage(ga.Amount);
             Instantiate(damageVFX, target.transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.15f); // 等待一段时间以显示伤害效果
+            if(target.CurrentHealth <=0)
+            {
+                if(target is EnemyView enemyView)
+                {
+                    KillEnemyGA killEnemyGA = new KillEnemyGA(enemyView);
+                    ActionSystem.Instance.AddReaction(killEnemyGA);
+                }
+                else
+                {
+                    //如果不是敌人，则可能是英雄或其他类型的角色
+                    //死亡播放游戏结束面板
+                }
+            }
         }
     }
 }

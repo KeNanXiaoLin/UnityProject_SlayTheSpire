@@ -6,17 +6,20 @@ using UnityEngine;
 public class EnemySystem : SingletonMono<EnemySystem>
 {
     [SerializeField] private EnemyBoradView enemyBoradView;
+    public List<EnemyView> enemies => enemyBoradView.EnemyViews;
 
     private void OnEnable()
     {
         ActionSystem.AttachPerformer<EnemyTurnGA>(EnemyTurnPerformer);
         ActionSystem.AttachPerformer<AttackHeroGA>(AttackHeroPerformer);
+        ActionSystem.AttachPerformer<KillEnemyGA>(KillEnemyPerformer);
     }
 
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<EnemyTurnGA>();
         ActionSystem.DetachPerformer<AttackHeroGA>();
+        ActionSystem.DetachPerformer<KillEnemyGA>();
     }
 
     public void SetUp(List<EnemyData> datas)
@@ -46,6 +49,10 @@ public class EnemySystem : SingletonMono<EnemySystem>
         //处理造成伤害
         DealDamageGA dealDamageGA = new DealDamageGA(attacker.AtkAmount, new() { HeroSystem.Instance.HeroView });
         ActionSystem.Instance.AddReaction(dealDamageGA);
-        
+    }
+
+    private IEnumerator KillEnemyPerformer(KillEnemyGA killEnemyGA)
+    {
+        yield return enemyBoradView.RemoveEnemy(killEnemyGA.EnemyView);
     }
 }
