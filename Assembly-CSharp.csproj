@@ -60,28 +60,37 @@
     <Analyzer Include="D:\Unity\2022.3.53f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Data\PerkData.cs" />
     <Compile Include="Assets\Scripts\System\EnemySystem.cs" />
     <Compile Include="Assets\Scripts\View\CardView.cs" />
+    <Compile Include="Assets\Scripts\Model\Perk.cs" />
     <Compile Include="Assets\Scripts\Framework\Input\InputMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\TextUtil.cs" />
     <Compile Include="Assets\Scripts\GamActions\EnemyTurnGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\EncryptionUtil.cs" />
+    <Compile Include="Assets\Scripts\TargetModes\AllEnemyTM.cs" />
     <Compile Include="Assets\Scripts\Creator\EnemyViewCreator.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
+    <Compile Include="Assets\Scripts\GamActions\AttackHeroGA.cs" />
+    <Compile Include="Assets\Scripts\TargetModes\NoTM.cs" />
     <Compile Include="Assets\Scripts\Framework\Scene\SceneMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\MathUtil.cs" />
+    <Compile Include="Assets\Scripts\Model\PerkCondition.cs" />
     <Compile Include="Assets\Scripts\System\EffectSystem.cs" />
     <Compile Include="Assets\Scripts\UI\ManaUI.cs" />
     <Compile Include="Assets\Scripts\Framework\Mono\MonoMgr.cs" />
+    <Compile Include="Assets\Scripts\GamActions\KillEnemyGA.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABMgr.cs" />
+    <Compile Include="Assets\Scripts\TargetModes\RandomEnemyTM.cs" />
     <Compile Include="Assets\Scripts\Effects\DrawCardsEffect.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
+    <Compile Include="Assets\Scripts\System\PerkSystem.cs" />
     <Compile Include="Assets\Scripts\System\HeroSystem.cs" />
     <Compile Include="Assets\Scripts\System\MatchSetUpSystem.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\ActionSystem.cs" />
-    <Compile Include="Assets\Scripts\System\CardViewHover.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolMgr.cs" />
+    <Compile Include="Assets\Scripts\System\CardViewHover.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonMono.cs" />
     <Compile Include="Assets\Scripts\GamActions\DrawCardGA.cs" />
     <Compile Include="Assets\Scripts\GamActions\SpendManaGA.cs" />
@@ -92,15 +101,20 @@
     <Compile Include="Assets\Scripts\GamActions\PlayCardGA.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerMgr.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\GameAction.cs" />
+    <Compile Include="Assets\Scripts\Effects\AutoTargetEffect.cs" />
+    <Compile Include="Assets\Scripts\System\ManualTargetSystem.cs" />
     <Compile Include="Assets\Scripts\Framework\Pool\PoolObj.cs" />
     <Compile Include="Assets\Scripts\Framework\Timer\TimerItem.cs" />
     <Compile Include="Assets\Scripts\GamActions\PerformEffectGA.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\EventCenter.cs" />
+    <Compile Include="Assets\Scripts\PerkCondition\OnEnemyAttackCondition.cs" />
     <Compile Include="Assets\Scripts\Creator\CardViewCreator.cs" />
     <Compile Include="Assets\Scripts\View\EnemyBoradView.cs" />
     <Compile Include="Assets\Scripts\Framework\AB\ABResMgr.cs" />
     <Compile Include="Assets\Scripts\Framework\Music\MusicMgr.cs" />
+    <Compile Include="Assets\Scripts\GamActions\DealDamageGA.cs" />
     <Compile Include="Assets\Scripts\UI\EndTurnButtonUI.cs" />
+    <Compile Include="Assets\Scripts\Interface\IHaveCaster.cs" />
     <Compile Include="Assets\Scripts\View\CombatantView.cs" />
     <Compile Include="Assets\Scripts\GamActions\DiscardAllCardsGA.cs" />
     <Compile Include="Assets\Scripts\View\HandView.cs" />
@@ -108,14 +122,18 @@
     <Compile Include="Assets\Scripts\Model\Card.cs" />
     <Compile Include="Assets\Scripts\Framework\UWQ\UWQResMgr.cs" />
     <Compile Include="Assets\Scripts\View\HeroView.cs" />
+    <Compile Include="Assets\Scripts\System\DamageSystem.cs" />
+    <Compile Include="Assets\Scripts\Effects\DealDamageEffect.cs" />
     <Compile Include="Assets\Scripts\Util\MouseUtil.cs" />
     <Compile Include="Assets\Scripts\System\CardSystem.cs" />
+    <Compile Include="Assets\Scripts\Model\TargetMode.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton\SingletonAutoMono.cs" />
     <Compile Include="Assets\Scripts\Framework\EditorRes\EditorResMgr.cs" />
     <Compile Include="Assets\Scripts\Model\Effect.cs" />
     <Compile Include="Assets\Scripts\Data\CardData.cs" />
     <Compile Include="Assets\Scripts\System\ManaSystem.cs" />
+    <Compile Include="Assets\Scripts\View\ArrowView.cs" />
     <Compile Include="Assets\Scripts\GamActions\RefillManaGA.cs" />
     <Compile Include="Assets\Scripts\System\Interactions.cs" />
     <Compile Include="Assets\Scripts\Framework\UI\UIMgr.cs" />
@@ -124,7 +142,9 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -136,10 +156,13 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_PASSES.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
@@ -997,6 +1020,82 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Path.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Common">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Splines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Splines.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1005,20 +1104,12 @@
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.2D.Common.Path.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
@@ -1053,24 +1144,8 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Aseprite.Common">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
@@ -1081,72 +1156,32 @@
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Splines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Splines.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Mathematics">
@@ -1161,24 +1196,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.Splines.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.2D.Aseprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
@@ -1203,9 +1226,29 @@
       <Project>{686E3DD7-756A-1C09-1EA0-AD42C3CAE312}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{D78E180E-BEDA-9EE6-17C0-518B9F0D3A81}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{89CE06D0-5302-A9A9-A4AB-710DD3145BD8}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{AEEA8286-D36B-5DE5-247A-CB21EC3FF6B8}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
     <ProjectReference Include="SRDemo-Editor.csproj">
       <Project>{A26AB8CD-4550-8335-D0FF-B658BCAE2C88}</Project>
       <Name>SRDemo-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{B6777419-F866-BF02-223B-F1E33BDB3526}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{33F0BD45-61BD-C102-6096-58133AD0B31E}</Project>
+      <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="SRDemo.csproj">
       <Project>{B5BC10A5-AA56-A6B2-01D8-0222076272C1}</Project>
@@ -1218,6 +1261,10 @@
     <ProjectReference Include="SREditor-Editor.csproj">
       <Project>{73BAA3C3-4C4C-BD6C-5BC0-42CB3420DACA}</Project>
       <Name>SREditor-Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{CD4D032F-B93A-A909-4F7C-E9511C5C7A5E}</Project>
+      <Name>CFXREditor</Name>
     </ProjectReference>
     <ProjectReference Include="SREditor.csproj">
       <Project>{4E2ADF31-EC86-122D-70C0-943F89FA12D7}</Project>

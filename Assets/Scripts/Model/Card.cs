@@ -8,7 +8,8 @@ public class Card
     public string Title => data.CardName;
     public string Des => data.Des;
     public Sprite Image => data.CardImage;
-    public List<Effect> Effects => data.Effects;
+    public Effect ManualTargetEffect => data.ManualTargetEffect;
+    public List<AutoTargetEffect> OtherEffects => data.OtherEffects;
     public int Mana { get; private set; }
 
 

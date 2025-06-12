@@ -84,8 +84,8 @@
     <Compile Include="Assets\SREditor\Package\Editor\Scripts\MissingTypesValidator\ReportFormats\IAssetMissingTypeReport.cs" />
     <Compile Include="Assets\SREditor\Package\Editor\Scripts\Settings\SREditorSettingsProvider.cs" />
     <Compile Include="Assets\SREditor\Package\Editor\Scripts\ClassReplacer\SRClassReplacer.cs" />
-    <Compile Include="Assets\SREditor\Package\Editor\Scripts\SRActions\SRActionFactory.cs" />
     <Compile Include="Assets\SREditor\Package\Editor\Scripts\Settings\ShowNameType.cs" />
+    <Compile Include="Assets\SREditor\Package\Editor\Scripts\SRActions\SRActionFactory.cs" />
     <Compile Include="Assets\SREditor\Package\Editor\Scripts\SearchTree\SRTypesSearchWindowProvider.cs" />
     <Compile Include="Assets\SREditor\Package\Editor\Scripts\ClassReplacer\SRTypeUpgrader.cs" />
     <Compile Include="Assets\SREditor\Package\Editor\Scripts\Comparers\TypeInfoArrayComparer.cs" />

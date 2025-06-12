@@ -49,10 +49,17 @@ public class CardSystem : SingletonMono<CardSystem>
         //消耗卡牌的法力值
         SpendManaGA spendManaGA = new SpendManaGA(playCardGA.Card.Mana);
         ActionSystem.Instance.AddReaction(spendManaGA);
-        //执行卡牌效果
-        foreach (var effect in playCardGA.Card.Effects)
+
+        if(playCardGA.Card.ManualTargetEffect !=null)
         {
-            PerformEffectGA performEffectGA = new PerformEffectGA(effect);
+            PerformEffectGA performEffectGA = new PerformEffectGA(playCardGA.Card.ManualTargetEffect, new() { playCardGA.ManualTarget});
+            ActionSystem.Instance.AddReaction(performEffectGA);
+        }
+        //执行卡牌效果
+        foreach (var effect in playCardGA.Card.OtherEffects)
+        {
+            List<CombatantView> targets = effect.TargetMode.GetTargets();
+            PerformEffectGA performEffectGA = new PerformEffectGA(effect.Effect,targets);
             ActionSystem.Instance.AddReaction(performEffectGA);
         }
     }
@@ -91,7 +98,7 @@ public class CardSystem : SingletonMono<CardSystem>
     {
         foreach (var card in hand)
         {
-            discardPile.Add(card);
+            
             CardView cardView = handView.RemoveCard(card);
             yield return DiscardCard(cardView);
         }
@@ -115,6 +122,7 @@ public class CardSystem : SingletonMono<CardSystem>
 
     private IEnumerator DiscardCard(CardView cardView)
     {
+        discardPile.Add(cardView.Card);
         cardView.transform.DOScale(Vector3.zero, 0.15f);
         Tween tween = cardView.transform.DOMove(disCardPoint.position, 0.15f);
         yield return tween.WaitForCompletion();

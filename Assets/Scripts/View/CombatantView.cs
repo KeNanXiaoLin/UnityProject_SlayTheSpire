@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -25,5 +26,16 @@ public class CombatantView : MonoBehaviour
         {
             hpText.text = $"HP: {CurrentHealth}/{MaxHealth}";
         }
+    }
+
+    public void Damage(int amount)
+    {
+        CurrentHealth -= amount;
+        if (CurrentHealth < 0)
+        {
+            CurrentHealth = 0;
+        }
+        transform.DOShakePosition(0.2f, 0.5f);
+        UpdateHealthText();
     }
 }
