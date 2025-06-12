@@ -47,7 +47,7 @@ public class EnemySystem : SingletonMono<EnemySystem>
         yield return tween.WaitForCompletion();
         attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.25f);
         //处理造成伤害
-        DealDamageGA dealDamageGA = new DealDamageGA(attacker.AtkAmount, new() { HeroSystem.Instance.HeroView });
+        DealDamageGA dealDamageGA = new DealDamageGA(attacker.AtkAmount, new() { HeroSystem.Instance.HeroView }, ga.Caster);
         ActionSystem.Instance.AddReaction(dealDamageGA);
     }
 

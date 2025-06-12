@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\TargetModes\RandomEnemyTM.cs" />
     <Compile Include="Assets\Scripts\Effects\DrawCardsEffect.cs" />
     <Compile Include="Assets\Scripts\Framework\EventCenter\E_EventType.cs" />
+    <Compile Include="Assets\Scripts\System\PerkSystem.cs" />
     <Compile Include="Assets\Scripts\System\HeroSystem.cs" />
     <Compile Include="Assets\Scripts\System\MatchSetUpSystem.cs" />
     <Compile Include="Assets\Scripts\ActionSystem\ActionSystem.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Scripts\Framework\Music\MusicMgr.cs" />
     <Compile Include="Assets\Scripts\GamActions\DealDamageGA.cs" />
     <Compile Include="Assets\Scripts\UI\EndTurnButtonUI.cs" />
+    <Compile Include="Assets\Scripts\Interface\IHaveCaster.cs" />
     <Compile Include="Assets\Scripts\View\CombatantView.cs" />
     <Compile Include="Assets\Scripts\GamActions\DiscardAllCardsGA.cs" />
     <Compile Include="Assets\Scripts\View\HandView.cs" />
