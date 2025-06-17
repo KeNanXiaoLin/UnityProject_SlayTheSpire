@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693f5a47b6e638f4d9c4518132e7cd22, type: 3}
+  m_Name: ShieldCard
+  m_EditorClassIdentifier: 
+  <Des>k__BackingField: Shield 5
+  <Mana>k__BackingField: 2
+  <CardName>k__BackingField: Shield Card
+  <CardImage>k__BackingField: {fileID: 21300000, guid: fd5a0756d018d1840b8526327073f082, type: 3}
+  <ManualTargetEffect>k__BackingField:
+    rid: 5356317465264783365
+  <OtherEffects>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5356317465264783365
+      type: {class: ShieldEffect, ns: , asm: Assembly-CSharp}
+      data:
+        ShieldCount: 5

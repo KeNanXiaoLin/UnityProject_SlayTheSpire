@@ -72,6 +72,5 @@ public class HandView : MonoBehaviour
             cards[i].transform.DORotate(rotation.eulerAngles, time);
         }
         yield return new WaitForSeconds(time);
-        Debug.Log("发牌结束");
     }
 }

@@ -13,14 +13,14 @@ public class ManualTargetSystem : SingletonMono<ManualTargetSystem>
         arrowView.SetUpArrow(startPosition);
     }
 
-    public EnemyView EndTargeting(Vector3 endPosition)
+    public CombatantView EndTargeting(Vector3 endPosition)
     {
         arrowView.gameObject.SetActive(false);
         if (Physics.Raycast(endPosition, Vector3.forward, out RaycastHit hit, 100f, targetLayerMask)
             && hit.collider != null
-            && hit.transform.TryGetComponent<EnemyView>(out EnemyView enemyView))
-        {
-            return enemyView;
+            && hit.transform.TryGetComponent<CombatantView>(out CombatantView combatantView))
+        {   
+            return combatantView;
         }
         return null;
     }
